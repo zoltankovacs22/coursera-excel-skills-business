@@ -1,0 +1,125 @@
+Final Assessment
+
+1. Question 1
+The final assignment contains two parts.
+Part 1
+Download and open the workbook and go the Data1 worksheet.
+C4 Final Assignment v2.xlsx
+Here you have some weather data for 50 different U.S. cities covering 12 months from January to December. Columns C to N contain the temperature information where:
+'M' stands for Month, and the M is followed by a number between 1 and 12 denoting the month of January to December. These are always in order of 1 to 12.
+'H' stands for High, and the H is followed by a number that is either 2 or 3 digits, giving the average high temperature (Fahrenheit) for that city for that month.
+'L' stands for Low, and the L is followed by a number that is either 1 or 2 digits, giving the average low temperature (Fahrenheit) for that city for that month.
+The data is presented to you in alphabetical order by City.
+In the SummaryHigh sheet extract the monthly high figure data (all the digits between the 'H' and the 'L') using appropriate Excel functions.
+For your workings and calculations, you may use the remainder of the Data1 worksheet, the Workings_1 worksheet, or add new worksheets as you need.
+Question: Which of the following combination of functions could be used to achieve this task (although you may have used a different solution)?
+1.FIND, MID
+
+2. Question 2
+Observe that the numbers are aligned to the left, this is because they are still text values. Alter the function used so the results are numeric (you will get some errors, ignore them for now.)
+Question: Which function converts numbers stored as text to numeric values (without losing decimal place information)?
+Type in the function name only.
+2.VALUE
+
+3. Question 3
+Converting the values to numeric caused several #Value errors. If you look carefully you will notice that the data has used a Ø instead of a 0. Adjust the formula to replace the Øs with 0s.
+In row 55 calculate the highest temperatures for each month.
+Question: What is the highest temperature for March?
+Type in your number without spaces and special characters.
+3.80
+
+4. Question 4
+There are still two #VALUE errors for Portland. Identify what is causing the errors and adjust your formulas to correct them.
+Question: Which function did you need to add?
+4.SUBSTITUTE
+
+5. Question 5
+If you have successfully cleaned the data, you should now see the completed checksum values in row 57 of the SummaryHigh sheet. To help you self-assess if you have done the work correctly, the SummaryHigh Check Sum for January should be 259045.
+Question: What is the CheckSum for June?
+Type in your number without spaces and special characters.
+5.
+
+6. Question 6
+In the SummaryLow sheet extract the monthly low figure data (all the digits after the 'L' using appropriate Excel functions.
+For your workings and calculations, you may use the remainder of the Data1 worksheet, the Workings_1 worksheet, or add new worksheets as you need.
+Question: Which of the following combination of functions could be used to achieve this task (although you may have used a different solution)?
+6.RIGHT, LEN, FIND
+
+7. Question 7
+As you did with the SummaryHigh figures, adjust your calculations so that they remove any unwanted characters, replace the Øs with 0s and convert the results to numerics, to get a completely clean data set.
+To help you self-assess if you have done the work correctly, the SummaryLow Check Sum for January should be 172862.
+Question: What is the CheckSum for August?
+7.340769
+
+8. Question 8
+Now select the MonthSorted worksheet. Your task here is to write some formulas so that when a month is selected from the drop down box at cell C3, the green cells in columns B and C will show each city and its High temperature for that month, but automatically sorted from largest value temperature to the lowest value temperature. So, for example, when February is selected Miami should be at the top and Minneapolis should be at the bottom.
+If two or more cities have the same temperature, sort those equal cities by alphabetical order (A at the top, Z at the bottom).
+Use columns K-N of the MonthSorted worksheet for your workings, and report the final answers in columns B and C.
+In K2 use a function to get the appropriate column number from which to select the data for the selected month. For example, if the selected month is January, the formula should return 1.
+Question: Which function is best suited to this task?
+8.MATCH
+
+9. Question 9
+In column K use a formula (with the help of the value in K2) to retrieve the high temperature for the corresponding city in column J and the selected month.
+Question: Which function would be best suited to this task?
+9.INDEX
+
+10. Question 10
+Where the temperatures are the same we need to sort by City alphabetically, we can take advantage of the fact the cities are currently correctly sorted so the higher the row number the further down they should go. In column L calculate an adjusted value by subtracting 1000th of the row number from the temperature (i.e. temperature - row number/1000).
+Change the selected month to March, then in a blank cell calculate the sum of the adjusted values.
+Question: What is the sum to 3 decimal places?
+Enter the answer below using a dot for the decimal point - e.g., 1234.123
+10.2983.525
+
+11. Question 11
+In column M use an appropriate function to rank each adjusted value against the rest of the set.
+Question: What is the sum of the correct rankings for Las Vegas, Los Angeles & Louisville (for March)?
+11.49
+
+12. Question 12
+In column N calculate the sort order using the numbers in column A and the rankings in column M. In other words in N5 you should end up with the value 24 as the 24th value in the list (Miami) has the highest temperature for March.
+Question: What is the sum of the rankings for Memphis to Portland (N27:N39)?
+12.398
+
+13. Question 13
+Use the calculated sort order to populate columns B and C with the cities and temperatures in the correct sort order.
+Question: Which of the following functions would correctly retrieve the city with the highest temperature:
+13.=INDEX(J$5:J$54,$N5)
+
+14. Question 14
+What is the CheckSum for the City (in B56)?
+14.382726
+
+15. Question 15
+Congratulations, that is the end of Part 1.
+Part 2.
+Select the Scenarios worksheet. The information about the task is presented in the worksheet. Read it, and when you are ready, write the formulas you need in order to populate the green cells at F54:G83.
+When you are done, answer the questions below.
+Make sure to submit all of your answers rounded to the nearest dollar (which should be how they are displayed by Excel), but without any dollar signs or other punctuation.
+For example, if you were asked for the value in cell G54, which is $13,171.74, you would write "13172".
+(Hint: This is indeed the correct value for cell G54. Use it to check your work.)
+Question: What is the value of the Initial Deposit for Account Number 2?
+15.7990
+
+16. Question 16
+What is the value of the Initial Deposit for Account Number 5?
+16.7600
+
+17. Question 17
+What is the value of the Final Account Balance for Account Number 11?
+13.13203
+
+18. Question 18
+What is the value of the Final Account Balance for Account Number 20?
+18.22745 
+
+19. Question 19
+What is the sum of the Initial Deposits for all of the accounts? (i.e. the value of the Check Sum at cell F85)
+Enter whole numbers only, without a currency symbol or thousands separator.
+19.196830
+
+20. Question 20
+What is the sum of the Final Account Balance for all of the accounts? (i.e. the value of the Check Sum at cell G85)
+Enter whole numbers only, without a currency symbol or thousands separator.
+20.713101
+

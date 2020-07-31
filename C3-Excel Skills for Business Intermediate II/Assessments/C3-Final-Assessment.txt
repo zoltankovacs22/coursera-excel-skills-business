@@ -1,0 +1,133 @@
+Final Assessment
+
+1. Question 1
+You are required to work on a spreadsheet for an Event Planning company who is hosting a Charity Fundraiser. Follow the instructions carefully and answer the questions as you go. Note that some data is stored in tables and there are several named ranges already in the workbook. Feel free to apply your own named ranges where appropriate. Also, the Error checking rules should be set to the default.
+C3 Final Assessment.xlsx
+Go to the Client Database Worksheet. This contains a list of all regular clients. We want to avoid introducing data entry errors so we will look at adding data validation.
+Which data validation option would be best for First Name?
+1.Any Value
+
+2. Question 2
+Which data validation option would be best for Client ID?
+2.Whole Number
+
+3. Question 3
+Using the lists in the Lookup Lists tab, add validation for the Organisation and Country Code so that only values that appear in the lists can be entered. Next Circle Invalid Data. Just looking at data in rows 7 to 27, how many red circles appear?
+Correct the data by selecting the correct option from the list. For the Country Code, choose the closest one alphabetically.
+3.4
+
+4. Question 4
+Add data validation to prevent users entering a Start Date in the future. Which of the following is the correct formula?
+4.=E7<=TODAY()
+
+5. Question 5
+We want to identify all clients who started from 2017-01-01 onwards. In I7 enter a formula that will put the text "New" if the start date is the same or more recent than the date in N7 and otherwise leave the cell blank. How many new joiners are shown in O7?
+5.48
+
+6. Question 6
+We have decided to send a gift to clients who have shown long-term loyalty or attended a lot of events. Create a calculation in J7 that will put "Yes" in the column if the start year was before 2013 or if the events attended is 15 or over, otherwise leave blank. How many gifts are we going to need to send (see N16)?
+Hint: use the YEAR function i.e. YEAR(E7)
+6.84
+
+7. Question 7
+We award a status based on how many events clients have attended. If they have attended fewer than 10 events they are given Bronze, 10-19 they get Silver, 20-29 is Gold and anything from 30 upwards is Platinum. Enter a formula in K7 to lookup the Client's status using the lookup array in M10:N13. How many Gold members do we have (value in O12)?
+7.19
+
+8. Question 8
+We need to contact all the new members who live in Great Britain (GB). Add conditional formatting to make the whole row of the table yellow (or any colour of your choosing) where the Country is GB and the New Status is New (Hint: use a function that evaluates multiple criteria). In the Client ID column sort by colour to arrange the members we need to contact at the top of the list. What is the value of Check Digit 1 in N15?
+8.22649
+
+9. Question 9
+You have now completed the required changes to the Client Database, click onto the Attendees worksheet, and follow the instructions to complete the calculations required.
+A list of Client IDs for those clients attending has been entered in the table Attendees. To make this data easier to understand and work with, use an appropriate lookup function to lookup the First Name for each of the Clients attending. You should get one NA error. What Client ID caused the error? It turns out this client has unsubscribed and will not be attending, remove this record (be careful not to delete the seating plan data on the right).
+9.13343
+
+10. Question 10
+Use an appropriate lookup function to lookup the Last Name for each of the Clients attending. Sort the data by Last Name (A-Z). Which Client ID is now first (in A7)?
+10.26537
+
+11. Question 11
+Use appropriate lookup functions to lookup the Country and Status for each of the Clients attending. How many Bronze members are attending (shown in J10)?
+11.72
+
+12. Question 12
+The seating plan in I10:M64 has allocated seating areas by Country and Status. In the Seating Area column, use an appropriate lookup function to look up the correct seating area from the seating plan using the client's Status and Country. How many people are currently being seated in area F (shown in M8)?
+12.17
+
+13. Question 13
+Well done. Now click into the Cost Overview sheet. There are a few errors that we will need to address and then we will look at different cost models.
+You will notice quite a few errors. Start by clicking into D9. This is a very simple formula, so it's probably not causing the error, it's just trying to work with a cell that has an error in it. Use the Trace Error tool to find the cell that is causing the error. Each red arrowhead indicates a cell affected by the original error, how many are there?
+13.
+
+14. Question 14
+Which cell did the error originate in?
+14.C27
+
+15. Question 15
+Correct the error. What is the Total Cost (D9) now? Enter whole numbers only.
+15.25119
+
+16. Question 16
+That has fixed most of the problems, but there is still a green triangle showing in cell D17, which suggests we may have another error. Click on D17 and identify what the problem is, if necessary correct it. What is the Total Cost (D9) now? Enter whole numbers only.
+16.25565
+
+17. Question 17
+You suspect that changing the value in D6 will impact a lot of the calculations, but you want to find out how many. Click in D6 and Trace Dependents (just once). How many direct dependents does it have? (Count the blue arrowheads)
+17.
+
+18. Question 18
+Clear the arrows, and now find out which cell is the direct precedent of D7 using Trace Precedents. What is the cell reference (do not include sheet name)? Remove arrows when done.
+18.
+
+19. Question 19
+We are still quite far off our target of 200 guests and a bit worried that we might not achieve it. Change the value in D6 to 1 and then use Goal Seek to find out the minimum number of guests we need to not make a loss, i.e. get $0 profit. What is the minimum number of guests? Enter a whole number only (no decimal places).
+19.95
+
+20. Question 20
+Change the value in D6 to 91 to see what profit we are currently making. We would like to see how our profit will be affected by changing our catering company. Use the Scenario Manager to create a scenario called Food2U using the cell D23 with its current value. Add two additional scenarios, one called Munchies with the value Munchies in D23 and another called Janelle's with the value Janelle's. Show the scenario for Munchies. What is the Profit in D12? Enter the number to 2 decimal places.
+20.407.30
+
+21. Question 21
+Create a Summary of all 3 Scenarios. Which caterer yields the highest profit?
+21.Munchies
+
+22. Question 22
+With 91 guests coming and Munchies as our caterer, our cost per guest is higher than the ticket price. Use the Solver tool to minimise the Cost/Guest by adjusting Guests (D6), Site Staff (B17) and Speakers (B31). Add constraints so that Site Staff cannot be less than 2, Speakers cannot be less than 1 and Guests cannot be more than 400. Save the scenario as Min Guest Cost and keep the solution. What is the new Cost/Guest? Enter the number to 2 decimal places.
+22.
+
+23. Question 23
+We want to protect all the calculations in this worksheet, but we need users to be able to still edit cells D6 and D23. Before applying protection we should:
+23.Unlock these cells
+
+24. Question 24
+Having made provision for D6 and D23, how would we then protect the rest of the worksheet?
+24.Review > Protect Sheet
+
+25. Question 25
+To make it easy for their users to switch between caterers you decide to create 3 macros to show the 3 different scenarios. These macros need to be relative references.
+25.False
+
+26. Question 26
+Record a macro called ShowFood2U (no shortcut key and store in workbook) that shows the scenario Food2U. (Don't perform any other actions while recording.) Open the Macro in the VBA Editor. Which of the following is the line of code to show the Scenario?
+26.ActiveSheet.Scenarios("Food2U").Show
+
+27. Question 27
+Copy the whole macro (from Sub to End Sub) and Paste it underneath the End Sub. Change the name to ShowJanelles() and replace the text "Food2U" with "Janelle's". Go back to your worksheet and click the Macros button. You should see two macros there. Run the one called ShowJanelles. What is the total catering cost now (D28)? Just enter a whole number (no $ or decimal places).
+Repeat this step to create a macro to show the Munchies scenario.
+27.
+
+28. Question 28
+You want to be able to run the macros using the buttons provided (to the right of the catering totals). To do so, after you unprotect the worksheet, you will need to:
+28.Right Click the Button > Assign Macro
+
+29. Question 29
+To delete a macro we can: (select 2 options)
+29.Open the VBA Editor and delete the code
+Developer Tab > Macros > Delete
+
+30. Question 30
+To preserve the macros in this workbook I can save as what type of file? (select 2 options)
+30.Binary Workbook (.xlsb)
+Macro-Enabled Workbook (.xlsm)
+
+
